@@ -1,0 +1,29 @@
+.navigation {
+    display: flex;
+    list-style: none;
+    align-items:center;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.navigation__item {
+    margin-left: 23px;
+    align-items: center;
+    justify-content: space-between;
+}
+.navigation,
+.navigation__item :focus {
+    color: #2196f3;
+}
+.navigation,
+.navigation__item :hover {
+    color: #2196f3;
+}
+.navigation__item--active::after {
+    content: "";
+    display: block;
+    position: relative;
+    border-top: 4px solid #2196f3;
+    border-radius: 2px;
+    top: 29px;
+    margin-top: -4px;
+}
