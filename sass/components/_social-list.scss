@@ -14,10 +14,11 @@
     fill: #AFB1B8;  
     width: 20px;
     height: 20px;
+    &:hover {
+        fill: var(--main-color);
+    }
 }
-.social-list__icons:hover {
-    fill: var(--main-color);
-}
+
 
 .social-list:hover svg,
 .social-list:focus svg {
