@@ -1,0 +1,22 @@
+.text-figcaption {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1, 19;
+    text-align: center;
+}
+.text-figcaption1 {
+    font-size: 16px;
+    line-height: 1, 19;
+    text-align:center;
+    color: #757575;
+}
+.team__item1 {
+    margin-right: 15px;
+    margin-left: 15px; 
+    padding: 0px;
+    background: var(--main-color);
+        /* material shadow v1 */
+    
+        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+        border-radius: 0px 0px 4px 4px;
+}
