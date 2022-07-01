@@ -9,20 +9,22 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css" rel="stylesheet">
     <style type="text/css"></style>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/main.css">
+
     </head>
     <body>
         <header class="header">
             <div class="container container-header">
-            <a class="logo-item" href="WebStudio"><h3 class="text-logo"><span class="blue">Web</span><span class="black">Studio</span></h3></a>
+            <a class="logo" href="WebStudio"><h3 class="logo__text"><span class="logo__text--color1">Web</span><span class="logo__text--color2">Studio</span></h3></a>
             <nav>
-            <ul class="menu">
-                <li class="menu-item menu-item-active"><a href="index.html" class="black link">Agencja</a></li>
-                <li class="menu-item"><a href="portfolio.html" class="black link">Portfolio</a></li>
-                <li class="menu-item"><a href="" class="black link">Kontakt</a></li>
+            <ul class="navigation">
+                <li class="navigation__item navigation__item--active"><a href="index.html" class="logo__text--color2 link">Agencja</a></li>
+                <li class="navigation__item"><a href="portfolio.html" class="logo__text--color2 link">Portfolio</a></li>
+                <li class="navigation__item"><a href="" class="logo__text--color2 link">Kontakt</a></li>
             </ul>
             </nav> 
-            <ul class="menu">
-                <li class="menu-item">
+            <ul class="navigation">
+                <li class="navigation__item">
                     <a class="hover" href="mailto:info@devstudio.com">
                     <svg width="16" height="12">
                         <use
@@ -31,7 +33,7 @@
                     </svg>
                     info@devstudio.com</a>
                 </li>
-                <li class="menu-item">
+                <li class="navigation__item">
                     <a class="hover" href="phone:+48111111111">
                         <svg width="16" height="12">
                             <use
@@ -308,7 +310,7 @@ non sodales dui. Interdum et malesuada</p>
             <section class="container">
                <div class="icon-footer">
                    <div>
-                <a href="WebStudio"><h3 class="text-logo-footer"><span class="blue">Web</span><span class="white">Studio</span></h3></a>
+                <a href="WebStudio"><h3 class="text-logo-footer"><span class="logo__text--color1">Web</span><span class="logo__text--color3">Studio</span></h3></a>
                 <address class="text-adres white">
                      m. Warszawa, Aleje Jerozolimskie 21
                 </address>
@@ -381,7 +383,7 @@ non sodales dui. Interdum et malesuada</p>
                         </label>
                     </form>
                 </button>
-                <form class="">
+                <form >
                     <div class="form-group" role="group" aria-labelledby="contact-details-head">
                         <h3 class="form-text" id="contact-details-head">
                             Zostaw swoje dane w formularzu poniżej
