@@ -52,10 +52,17 @@
     background-image: url(../images/Vector.svg);
     border: 3px solid var(--main-color);
 }
+.modal-form__group {
+    & input:focus-within {
+        border-color: #2196f3;
+      }
+    & label:focus-within {
+        fill: #2196F3;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      }
+}
 
-.modal-form__group input:focus-within {
-    border-color: #2196f3;
-  }
   .modal-form__text {
     font-family: 'Roboto';
         font-style: normal;
@@ -67,11 +74,7 @@
         color: #212121;
 }
   
-  .modal-form__group label:focus-within {
-    fill: #2196F3;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  }
+  
 .modal-form__name {
 position: absolute;
    left:55px;
