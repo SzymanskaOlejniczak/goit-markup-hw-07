@@ -93,10 +93,9 @@
        margin-left: 40px;
        padding-left: 40px;
         width: 448px;
-            height: 40px;
-            /*top: 93px;*/
-            border: 1px solid rgba(33, 33, 33, 0.2);
-            border-radius: 4px;
+        height: 40px;
+        border: 1px solid rgba(33, 33, 33, 0.2);
+        border-radius: 4px;
     }
     &__contact {
         display: block;
@@ -106,7 +105,7 @@
         border-radius: 4px;
             &:focus-within {
                 border-color: #2196f3;
-              }
+            }
     }
     &__label {
         font-family: 'Roboto';
