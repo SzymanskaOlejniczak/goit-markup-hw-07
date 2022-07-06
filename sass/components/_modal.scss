@@ -1,6 +1,6 @@
 
 .modal {
-    position: absolute;
+    position: relative;
     top:50%;
     left:50%;
     width: 528px;
@@ -9,7 +9,7 @@
     background-color: var(--main-color);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
-    &__close-btn {
+    &__btn {
         position: absolute;
         top: 8px;
         right: 8px;
@@ -20,6 +20,12 @@
         border-radius: 50%;
         background-color: transparent;
         cursor: pointer;
+    }
+    &__close-btn {
+        
+        width: 30px;
+        height: 30px;
+        
     }
     
     &__close-btn2 {
@@ -39,6 +45,7 @@
     &__policy--text::before {
         display: inline-block;
         content: "";
+        top: 300;
         width: 16px;
         height: 16px;
         margin-top: 0px;
