@@ -44,7 +44,7 @@ figure {
   margin: 0 auto;
   list-style: none;
 }
-.container-header {
+.container__header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -56,8 +56,11 @@ figure {
   list-style: none;
   margin: 0px;
 }
+.container__footer {
+  display: flex;
+}
 
-.section {
+section {
   padding-top: 94px;
   padding-bottom: 94px;
 }
@@ -102,7 +105,7 @@ figure {
 }
 
 .modal {
-  position: absolute;
+  position: relative;
   top: 50%;
   left: 50%;
   width: 528px;
@@ -112,7 +115,7 @@ figure {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 }
-.modal__close-btn {
+.modal__btn {
   position: absolute;
   top: 8px;
   right: 8px;
@@ -123,6 +126,10 @@ figure {
   border-radius: 50%;
   background-color: transparent;
   cursor: pointer;
+}
+.modal__close-btn {
+  width: 30px;
+  height: 30px;
 }
 .modal__close-btn2 {
   position: absolute;
@@ -141,6 +148,7 @@ figure {
 .modal-form__policy--text::before {
   display: inline-block;
   content: "";
+  top: 300;
   width: 16px;
   height: 16px;
   margin-top: 0px;
@@ -411,7 +419,7 @@ input:focus-within {
   background-color: #2196f3;
 }
 
-.title1 {
+.heading__title {
   font-weight: 900;
   font-size: 44px;
   line-height: 1, 36;
@@ -421,7 +429,7 @@ input:focus-within {
   color: var(--main-color);
 }
 
-.title2 {
+.main__title {
   font-weight: 700;
   font-size: 36px;
   line-height: 1, 17;
@@ -678,9 +686,6 @@ input:focus-within {
   background: #2f303a;
   height: 252px;
 }
-.footer__icon {
-  display: flex;
-}
 
 .footer-adress {
   list-style: none;
@@ -714,13 +719,10 @@ input:focus-within {
 
 .newsletter {
   flex-direction: column;
-  margin-top: -130px;
-  margin-left: 610px;
+  padding-left: 30px;
+  margin-top: 70px;
 }
-.newsletter__list {
-  display: inline;
-}
-.newsletter__item--text {
+.newsletter__text {
   color: var(--main-color);
   font-weight: 700;
   font-size: 14px;
