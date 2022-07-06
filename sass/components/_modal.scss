@@ -20,56 +20,32 @@
         border-radius: 50%;
         background-color: transparent;
         cursor: pointer;
+     
     }
     &__close-btn {
-        
+        transform:translateX(-8px);
         width: 30px;
         height: 30px;
-        
-    }
-    
-    &__close-btn2 {
-        position: absolute;
-        top: 437px;
-        background: var(--main-color);
-        border: 1px solid var(--main-color);
-        background-color: transparent;
         cursor: pointer;
     }
 }
-
+.modal__checkbox {
+    position: absolute;
+    justify-content: center;
+    top: 437px;
+    background: var(--main-color);
+    border: 1px solid var(--main-color);
+    background-color: transparent;
+    cursor: pointer;
+}
 .modal-form {
     display: flex;
     width: 100%;
-    flex-direction: column;
-    &__policy--text::before {
-        display: inline-block;
-        content: "";
-        top: 300;
-        width: 16px;
-        height: 16px;
-        margin-top: 0px;
-        margin-right: 4px;
-        border: 1px solid #000;
-        transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
-        .modal-form__policy:checked + & {
-            background-color: #2196f3;
-            border: none;
-            background-image: url(../images/Vector.svg);
-            border: 3px solid var(--main-color);
-        }
-    }
-    &__group {
-        & input:focus-within {
-            border-color: #2196f3;
-          }
-        & label:focus-within {
-            fill: #2196F3;
-            transition-duration: 250ms;
-            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-          }
-    }
+   
     &__text {
+        position: relative;
+        padding-top: 18px;
+        flex-direction: column;
         font-family: 'Roboto';
             font-style: normal;
             font-weight: 700;
@@ -125,6 +101,32 @@
             margin-left: 40px;
     }
     
+}
+.modal-form__policy--text::before {
+    display: inline-block;
+    content: "";
+    width: 16px;
+    height: 16px;
+    margin-top: 0px;
+    margin-right: 4px;
+    border: 1px solid #000;
+    transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-form__policy:checked + .modal-form__policy--text::before {
+        background-color: #2196f3;
+        border: none;
+        background-image: url(../images/Vector.svg);
+        border: 3px solid var(--main-color);
+}
+.modal-form__group {
+    & input:focus-within {
+        border-color: #2196f3;
+      }
+    & label:focus-within {
+        fill: #2196F3;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      }
 }
 input:focus,
 textarea:focus {
