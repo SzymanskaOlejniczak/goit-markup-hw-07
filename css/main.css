@@ -635,12 +635,19 @@ input:focus-within {
   cursor: pointer;
 }
 
-.box__item {
+.galery-box {
   position: relative;
   border: 1px solid #ececec;
   border-top: none;
 }
-.box__item--color {
+.galery-box__title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+.galery-box__title--gray {
   font-size: 16px;
   line-height: 1, 88;
   color: #757575;
@@ -648,12 +655,14 @@ input:focus-within {
   padding-right: 24px;
 }
 
-.box__size {
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 2;
-  padding-left: 24px;
-  padding-right: 24px;
+.galery__list {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  flex-wrap: wrap;
+  list-style: none;
+  padding-left: 0px;
+  margin: 0px;
 }
 
 .box {
