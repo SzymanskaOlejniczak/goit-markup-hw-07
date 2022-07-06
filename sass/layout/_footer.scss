@@ -1,14 +1,12 @@
 .footer {
     background: #2f303a;
     height: 252px;
-    &__icon {
-        display: flex;
-    } 
 }
-   
+
 .footer-adress {
     list-style: none;
     padding-left: 0px;
+  
     &__text {
         font-style: normal;
         font-size: 14px;
@@ -37,13 +35,9 @@
 
 .newsletter {
     flex-direction: column;
-    margin-top: -130px;
-    margin-left: 610px;
-    &__list {
-        display: inline;
-    }
-    &__item--text {
-        
+    padding-left: 30px;
+    margin-top: 70px;
+    &__text {
         color:var(--main-color);
         font-weight: 700;
         font-size: 14px;
