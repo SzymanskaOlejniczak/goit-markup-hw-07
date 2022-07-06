@@ -13,7 +13,7 @@
     </head>
     <body>
         <header class="header">
-            <div class="container container-header">
+            <div class="container container__header">
             <a class="logo" href="WebStudio"><h3 class="logo__text"><span class="logo__text--blue">Web</span><span class="logo__text--black">Studio</span></h3></a>
             <nav>
             <ul class="navigation">
@@ -46,13 +46,13 @@
         </header>
         <main>
         <section class="heading">
-            <div><h1 class="container title1">EFEKTYWNE ROZWIĄZANIA <br>DLA WASZEGO BIZNESU</h1> 
+            <div class="container"><h1 class="heading__title">EFEKTYWNE ROZWIĄZANIA <br>DLA WASZEGO BIZNESU</h1> 
             <button class="heading__button" type="button"data-modal-open>Zamów usługe</button> 
             </div>
         </section>
         <section>
-            <div class="lorem-ipsum container section">
-                    <div><a href="#"></a>
+            <div class="lorem-ipsum container">
+                    <div>
                         <svg class="lorem-ipsum__icon"> 
                             <use href="images/icons.svg#antenna"></use>
                          </svg>
@@ -62,7 +62,7 @@ Lorem ipsum dolor sit amet, consectetur
 adipiscing elit. Nam vel arcu sem. Sed
 non sodales dui. Interdum et malesuada</p>
                     </div>
-                    <div><a href="#"></a>
+                    <div>
                        <svg class="lorem-ipsum__icon"> 
                             <use href="images/icons.svg#clock"></use>
                          </svg>
@@ -72,7 +72,7 @@ Lorem ipsum dolor sit amet, consectetur
 adipiscing elit. Nam vel arcu sem. Sed
 non sodales dui. Interdum et malesuada</p>
                     </div>
-                    <div><a class="" href="#"></a>
+                    <div>
                         <svg class="lorem-ipsum__icon"> 
                             <use href="images/icons.svg#diagram"></use>
                          </svg>
@@ -82,7 +82,7 @@ Lorem ipsum dolor sit amet, consectetur
 adipiscing elit. Nam vel arcu sem. Sed
 non sodales dui. Interdum et malesuada</p>
                     </div>
-                    <div><a class="" href="#"></a>
+                    <div>
                         <svg class="lorem-ipsum__icon">
                             <use href="images/icons.svg#astronaut"></use>
                     </svg>
@@ -95,8 +95,8 @@ non sodales dui. Interdum et malesuada</p>
             </div>
         </section>
         <section>
-            <div class="section container">
-            <h2 class="title2">Czym się zajmujemy</h2>
+            <div class="container">
+            <h2 class="main__title">Czym się zajmujemy</h2>
             <ul class="img__list">
                 <li class="img__item">
                     <img src="images/first.jpg" 
@@ -125,9 +125,9 @@ non sodales dui. Interdum et malesuada</p>
             </ul>
             </div>
         </section> 
-        <section class="team section">
+        <section class="team">
         <div class="container">
-            <h2 class="title2">Nasz zespół</h2> 
+            <h2 class="main__title">Nasz zespół</h2> 
             <ul class="team__list">
                 <li class="team__item"><figure>
                 <img 
@@ -280,9 +280,9 @@ non sodales dui. Interdum et malesuada</p>
         </ul>
         </div>
         </section>
-        <section class="section">
+        <section>
         <div class="container">
-            <h2 class="title2">Nasi klienci</h2>
+            <h2 class="main__title">Nasi klienci</h2>
             <ul class="client__list">
                 <li><a class="client__item" href="#"></a>
                     <svg class="client__item--gray client__list"> 
@@ -318,19 +318,18 @@ non sodales dui. Interdum et malesuada</p>
         </section>    
         </main>
         <footer class="footer">  
-            <section class="container">
-               <div class="footer__icon">
+               <div class="container__footer container">
                 <div>
                 <a href="WebStudio"><h3 class="footer-logo__text"><span class="logo__text--blue">Web</span><span class="logo__text--white">Studio</span></h3></a>
                 <address class="footer-adress__text--color">
                      m. Warszawa, Aleje Jerozolimskie 21
                 </address>
                 <ul class="footer-adress">
-                    <li class=""><a href="mailto:info@example.com" class="footer-adress__text">info@example.com</a></li>
-                    <li><a href="phone:+48111111111" class="footer-adress__text">(+48)111 111 111</a>
-                </ul>
+                    <li><a class="footer-adress__text" href="mailto:info@example.com">info@example.com</a></li>
+                    <li><a href="phone:+48111111111" class="footer-adress__text">(+48)111 111 111</a></li>
+                </ul>    
                 </div>
-                    <div class="footer-social">
+                <div class="footer-social">
                         <a href="DOŁĄCZ DO NAS"><h3 class="footer-social__text">DOŁĄCZ DO NAS</h3></a>
                     <ul class="footer-social__list"> 
                         <li><a class="footer-social__item" href="#">
@@ -359,9 +358,8 @@ non sodales dui. Interdum et malesuada</p>
                         </li>
                     </ul>
                     </div>
-                </div>
                 <div class="newsletter">
-                   <label for="useremail"><h3 class="newsletter__item--text">
+                   <label for="useremail"><h3 class="newsletter__text">
                         ZAPISZ SIĘ DO NEWSLETTERA</h3></label>
                    <div>
                         <input class="newsletter__input" type="email" id="useremail" name="useremail" placeholder="E-mail" required=""/>
@@ -373,16 +371,15 @@ non sodales dui. Interdum et malesuada</p>
                         </button>
                     </div>
                  </div>
-                </section>     
+               </div>     
         </footer>
         <div class="backdrop is-hidden"data-modal>
             <div class="modal">
-                <button type="button"data-modal-close>
+                <button class="modal__btn" type="button"data-modal-close>
                 <svg class="modal__close-btn">
                     <use href="images/icons.svg#close-black"></use>
                 </svg>
                 </button>
-                <button type="button" class="modal__close-btn2">
                     <form class="modal-form" action="#" method="post">
                         <input  class="modal-form__policy visually-hidden" id="user-policy" type="checkbox">
                         <label for="user-policy" class="modal-form__policy--text">Oświadczam iż akceptuję
@@ -390,7 +387,6 @@ non sodales dui. Interdum et malesuada</p>
                             <a href="#politykaprywatności"> Politykę Prywatności.</a>
                         </label>
                     </form>
-                </button>
                 <form >
                     <div class="modal-form__group" role="group" aria-labelledby="contact-details-head">
                         <h3 class="modal-form__text" id="contact-details-head">
