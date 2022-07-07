@@ -94,9 +94,9 @@ non sodales dui. Interdum et malesuada</p>
                     </div>    
             </div>
         </section>
-        <section>
+        <section class="section">
             <div class="container">
-            <h2 class="main__title">Czym się zajmujemy</h2>
+            <h2 class="section__title-do">Czym się zajmujemy</h2>
             <ul class="img__list">
                 <li class="img__item">
                     <img src="images/first.jpg" 
@@ -125,9 +125,9 @@ non sodales dui. Interdum et malesuada</p>
             </ul>
             </div>
         </section> 
-        <section class="team">
+        <section class="team section">
         <div class="container">
-            <h2 class="main__title">Nasz zespół</h2> 
+            <h2 class="section__title">Nasz zespół</h2> 
             <ul class="team__list">
                 <li class="team__item"><figure>
                 <img 
@@ -280,9 +280,9 @@ non sodales dui. Interdum et malesuada</p>
         </ul>
         </div>
         </section>
-        <section>
+        <section class="section">
         <div class="container">
-            <h2 class="main__title">Nasi klienci</h2>
+            <h2 class="section__title">Nasi klienci</h2>
             <ul class="client__list">
                 <li><a class="client__item" href="#"></a>
                     <svg class="client__item--gray client__list"> 
@@ -375,18 +375,11 @@ non sodales dui. Interdum et malesuada</p>
         </footer>
         <div class="backdrop is-hidden"data-modal>
             <div class="modal">
-                <button class="modal__btn" type="button"data-modal-close>
-                <svg class="modal__close-btn">
+                <button class="modal__btn-close" type="button"data-modal-close="">
+                <svg class="modal__x" >
                     <use href="images/icons.svg#close-black"></use>
                 </svg>
                 </button>
-                    <form class="modal-form modal__checkbox" action="#" method="post">
-                        <input  class="modal-form__policy visually-hidden" id="user-policy" type="checkbox">
-                        <label for="user-policy" class="modal-form__policy--text">Oświadczam iż akceptuję
-                            <a href="#regulamin">Regulamin</a> i
-                            <a href="#politykaprywatności"> Politykę Prywatności.</a>
-                        </label>
-                    </form>
                 <form >
                     <div class="modal-form__group" role="group" aria-labelledby="contact-details-head">
                         <h3 class="modal-form__text" id="contact-details-head">
@@ -417,6 +410,11 @@ non sodales dui. Interdum et malesuada</p>
                             Kontakt
                             <textarea class="modal-form__contact" name="contact" id="contact" rows="8" placeholder="Wprowadź tekst"></textarea>
                         </label> 
+                        <input  class="modal-form__policy visually-hidden modal-form modal__checkbox" id="user-policy" type="checkbox">
+                        <label for="user-policy" class="modal-form__policy--text">Oświadczam iż akceptuję
+                            <a href="#regulamin">Regulamin</a> i
+                            <a href="#politykaprywatności"> Politykę Prywatności.</a>
+                        </label>
                     </div>
                     <div>
                         <button class="modal-form__submit" type="submit">Wyślij</button>
