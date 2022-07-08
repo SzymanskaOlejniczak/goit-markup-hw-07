@@ -4,6 +4,9 @@
     align-items:center;
     margin-top: 0px;
     margin-bottom: 0px;
+    &__link {
+        color: #212121;
+    }
     &,
     .navigation__item :focus {
     color: #2196f3;
