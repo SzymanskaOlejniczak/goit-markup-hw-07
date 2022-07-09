@@ -50,12 +50,6 @@ figure {
   align-items: center;
   height: 80px;
 }
-.container__button {
-  display: flex;
-  justify-content: center;
-  list-style: none;
-  margin: 90px 0px 50px 0px;
-}
 .container__footer {
   display: flex;
 }
@@ -82,7 +76,7 @@ figure {
 
 .is-hidden {
   opacity: 0;
-  visibility: hidden;
+  visibility: none;
   pointer-events: none;
 }
 
@@ -91,7 +85,7 @@ figure {
   margin-right: 164px;
   width: 200px;
   height: 50px;
-  margin-top: 80px;
+  margin-top: 45px;
   background: #2196F3;
   border: none;
   border-radius: 4px;
@@ -106,18 +100,18 @@ figure {
 
 .modal {
   position: absolute;
-  top: 50%;
   left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(1.25);
+  background-color: #fff;
   width: 528px;
-  min-height: 581px;
-  transform: translate(-50%, -50%);
-  background-color: var(--main-color);
+  height: 581px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 }
-.modal__btn-close {
+.modal__btn {
   position: absolute;
-  background-color: transparent;
+  background-color: #fff;
   cursor: pointer;
   top: 8px;
   right: 8px;
@@ -127,18 +121,17 @@ figure {
   height: 30px;
   z-index: 1000;
 }
-.modal__x {
+.modal__close-btn {
+  transform: translateX(-8px);
   width: 30px;
   height: 30px;
-  transform: translateX(-8px);
   z-index: 1000;
 }
 
 .modal__checkbox {
   position: absolute;
   justify-content: center;
-  top: 460px;
-  margin-left: 15px;
+  top: 437px;
   background: var(--main-color);
   border: 1px solid var(--main-color);
   background-color: transparent;
@@ -146,65 +139,87 @@ figure {
 }
 
 .modal-form {
+  position: relative;
   display: flex;
-  width: 100%;
+  flex-direction: column;
 }
 .modal-form__text {
-  position: relative;
-  padding-top: 18px;
-  flex-direction: column;
-  font-family: "Roboto";
-  font-style: normal;
   font-weight: 700;
   font-size: 20px;
-  line-height: 23px;
+  line-height: 1.15;
   text-align: center;
   letter-spacing: 0.03em;
-  color: #212121;
+  color: var(--text-black);
+  margin-top: 40px;
+  margin-bottom: 30px;
 }
-.modal-form__name {
+.modal-form__icon {
+  fill: #000;
   position: absolute;
-  left: 55px;
-  top: 68px;
+  left: 52px;
 }
-.modal-form__phone {
-  position: absolute;
-  left: 55px;
-  top: 128px;
+.modal-form__icon--person {
+  width: 15px;
+  height: 15px;
+  top: 125px;
 }
-.modal-form__email {
-  position: absolute;
-  left: 53px;
-  top: 186px;
+.modal-form__icon--phone {
+  left: 52px;
+  width: 15px;
+  height: 15px;
+  top: 195px;
 }
-.modal-form__place {
-  display: block;
-  margin-left: 40px;
-  padding-left: 40px;
-  width: 448px;
-  height: 40px;
-  border: 1px solid rgba(33, 33, 33, 0.2);
-  border-radius: 4px;
+.modal-form__icon--email {
+  left: 52px;
+  width: 16px;
+  height: 12px;
+  top: 265px;
 }
-.modal-form__contact {
-  display: block;
-  width: 448px;
-  margin-left: 40px;
-  border: 1px solid rgba(33, 33, 33, 0.2);
-  border-radius: 4px;
-}
-.modal-form__contact:focus-within {
-  border-color: #2196f3;
-}
-.modal-form__label {
+.modal-form__input {
+  color: grey;
   font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
-  line-height: 14px;
+  display: block;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  width: 448px;
+  height: 40px;
+  padding-left: 42px;
+}
+.modal-form__textarea {
+  resize: none;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  color: grey;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  display: block;
+  height: 120px;
+  width: 448px;
+  padding: 12px 16px;
+  border-radius: 4px;
+}
+.modal-form__textarea:focus-within {
+  border-color: #2196f3;
+}
+.modal-form__label {
+  font-size: 12px;
+  line-height: 1.16;
   letter-spacing: 0.01em;
-  color: #757575;
-  margin-left: 40px;
+  color: grey;
+  padding-left: 40px;
+  margin-bottom: 4px;
+  margin-top: 10px;
+}
+
+.modal-form::placeholder {
+  color: rgba(117, 117, 117, 0.5);
+  font-size: 12px;
+  line-height: 1.16;
 }
 
 .modal-form__policy--text::before {
@@ -212,8 +227,9 @@ figure {
   content: "";
   width: 16px;
   height: 16px;
-  margin-top: 50px;
+  margin-top: 10px;
   margin-left: 40px;
+  margin-right: 4px;
   border: 1px solid #000;
   transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -225,13 +241,23 @@ figure {
   border: 3px solid var(--main-color);
 }
 
-.modal-form__group input:focus-within {
+.modal-form__input:focus-visible,
+.modal-form__textarea:focus-visible {
+  outline: none;
+  border: 1px solid #2196f3;
+}
+
+.modal-form input:focus-within {
   border-color: #2196f3;
 }
-.modal-form__group label:focus-within {
+.modal-form label:focus-within {
   fill: #2196F3;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-form__label:focus-within svg {
+  fill: var(--blue);
 }
 
 input:focus,
@@ -273,6 +299,9 @@ input:focus-within {
   align-items: center;
   margin-top: 0px;
   margin-bottom: 0px;
+}
+.navigation__link {
+  color: #212121;
 }
 .navigation,
 .navigation .navigation__item :focus {
@@ -316,7 +345,14 @@ input:focus-within {
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
-.btn {
+.galery__buttons {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin: 90px 0px 50px 0px;
+}
+
+.galery__button {
   background-color: #F5F4FA;
   color: #212121;
   font-size: 16px;
@@ -331,7 +367,7 @@ input:focus-within {
   margin-right: 8px;
   transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.btn:hover {
+.galery__button:hover {
   background-color: #2196f3;
   color: white;
   background: #2196f3;
@@ -339,7 +375,7 @@ input:focus-within {
   border-radius: 4px;
   cursor: pointer;
 }
-.btn:not(:last-child) {
+.galery__button:not(:last-child) {
   margin-right: 8px;
 }
 
@@ -439,14 +475,6 @@ input:focus-within {
 }
 
 .section__title {
-  margin-bottom: 30px;
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1, 17;
-  text-align: center;
-}
-
-.section__title-do {
   font-weight: 700;
   font-size: 36px;
   line-height: 1, 17;
@@ -583,7 +611,7 @@ input:focus-within {
   flex-wrap: wrap;
   list-style: none;
   padding-left: 0px;
-  margin: 0px;
+  margin-top: 30px;
 }
 .team__item {
   margin-right: 15px;
