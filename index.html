@@ -305,12 +305,12 @@ non sodales dui. Interdum et malesuada</p>
                     </svg>
                 </li> 
                 <li><a class="client__list" href="#"></a>
-                    <svg class="client__item--gray client__list"> 
+                    <svg class="client__item--gray"> 
                         <use href="images/icons.svg#Logo5"></use>
                     </svg>
                 </li>
                  <li><a class="client__list" href="#"></a>
-                    <svg class="client__item--gray client__list"> 
+                    <svg class="client__item--gray"> 
                         <use href="images/icons.svg#Logo6"></use>
                     </svg>
                 </li>  
@@ -375,62 +375,50 @@ non sodales dui. Interdum et malesuada</p>
         </footer>
         <div class="backdrop is-hidden"data-modal>
             <div class="modal">
-                <button class="modal__btn-close" type="button"data-modal-close="">
-                <svg class="modal__x" >
+                <button class="modal__btn" type="button"data-modal-close="">
+                <svg class="modal__close-btn" >
                     <use href="images/icons.svg#close-black"></use>
                 </svg>
                 </button>
-                <form class="modal-form" name="signup-form" action="http://localhost:3000/posts" method="POST">
-                    <h3 class="modal-form__tekst">Zostaw swoje dane w formularzu poniżej</h3>
-                    <label class="modal-form__label" for="user_name">Imię
-                      <svg class="modal-form__icon modal-form__icon--avatar">
-                        <use href="images/person-black.svg#person"></use>
-                      </svg>
-                      <input class="modal-form__input" type="text" name="name" id="user_name" required="">
+            <form  class="modal-form">
+                    <h3 class="modal-form__text" id="contact-details-head">
+                        Zostaw swoje dane w formularzu poniżej
+                    </h3>
+                    <label for="username" class="modal-form__label">
+                        Imie
+                        <svg class="modal-form__icon modal-form__icon--person">
+                            <use href="images/person-black.svg#person"></use>
+                        </svg>   
+                        <input class="modal-form__input" type="text" id="username" name="contact-details.username" required=""/>
                     </label>
-          
-          
-                    <label class="modal-form__label" for="user_phone">Telefon
-                      <svg class="modal-form__icon modal-form__icon--phone">
-                        <use href="images/phone.svg#phone"></use>
-                      </svg>
-                      <input class="modal-form__input" type="tel" name="phone" id="user_phone" required=""></label>
-          
-          
-                    <label class="modal-form__label" for="user_email">E-mail
-                      <svg class="modal-form__icon modal-form__icon--email">
-                        <use href="images/first.jpg#email"></use>
-                      </svg>
-                      <input class="modal-form__input" type="email" name="email" id="user_email" required="">
+                    <label for="userphone" class="modal-form__label">
+                        Telefon
+                        <svg class="modal-form__icon modal-form__icon--phone">
+                            <use href="images/phone.svg#phone"></use>
+                        </svg>
+                        <input class="modal-form__input" type="tel" id= "userphone" name="contact-details.phone_number" required=""/>
                     </label>
-                    <label class="modal-form__label">
-                      Komentarz
-                      <textarea class="modal-form__textarea" type="text" name="comment" placeholder="Wprowadź tekst"></textarea>
+                    <label for="email" class="modal-form__label">
+                        Email
+                        <svg class="modal-form__icon modal-form__icon--email">
+                            <use href="images/email.svg#Email"></use>
+                        </svg>
+                    <input class="modal-form__input" type="email" id="email" name="contact-details.email" required=""/>
+                    </label>  
+                    <label for="contact" class="modal-form__label">
+                        Komentarz
+                        <textarea class="modal-form__textarea" name="contact" id="contact" rows="8" placeholder="Wprowadź tekst"></textarea>
+                    </label> 
+                    <input  class="modal-form__policy visually-hidden modal-form modal__checkbox" id="user-policy" type="checkbox">
+                    <label for="user-policy" class="modal-form__policy--text">Oświadczam iż akceptuję
+                        <a href="#regulamin">Regulamin</a> i
+                        <a href="#politykaprywatności"> Politykę Prywatności.</a>
                     </label>
-          
-                     <div class="checkbox-container">
-                      <input class="checkbox-container__default" type="checkbox" name="consent" value="consent" required="">
-          
-                      <label for="consent" class="checkbox-container__label">
-                        Oświadczam, iż akceptuję
-                        <a href="#rules" class="checkbox-container__link">Regulamin</a> i
-                        <a href="#privacypolicy" class="checkbox-container__link">Politykę Prywatności</a>.
-                      </label>
-                    </div>
-                    <button class="modal-form__button" type="submit">Wyślij</button>
-                  </form>>
-                        
-                        <input  class="modal-form__policy visually-hidden modal-form modal__checkbox" id="user-policy" type="checkbox">
-                        <label for="user-policy" class="modal-form__policy--text">Oświadczam iż akceptuję
-                            <a href="#regulamin">Regulamin</a> i
-                            <a href="#politykaprywatności"> Politykę Prywatności.</a>
-                        </label>
-                    </div>
-                    <div>
-                        <button class="modal-form__submit" type="submit">Wyślij</button>
-                    </div>
-                </form>
-            </div>
+             
+                <div>
+                    <button class="modal-form__submit" type="submit">Wyślij</button>
+                </div>
+            </form>
         </div>
         <script src="./js/modal.js"></script>
         <script defer="" src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js" integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA==" crossorigin="anonymous"></script>
